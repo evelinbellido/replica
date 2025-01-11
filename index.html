@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Mulish:wght@400;600;700&amp;display=swap">
     <link rel="stylesheet" href="style.css">
+    
     <title>Foto Salinas</title>
 </head>
 <body>
@@ -13,17 +14,22 @@
             <figure>
                 <img src="src/logo-foto-salinas.90d8ebc.webp" alt="Salinas">
             </figure>
-            <nav class="navbar-options">
-                <a href="">Catalogo</a>
-                <a href="">Marcas</a>
-                <a href="">Catalogo</a>
-                <a href="">Ver Catalogo</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar">-</span>
+                <span class="bar">-</span>
+                <span class="bar">-</span>
+            </div>
+            <nav id="menu" class="navbar-options">
+                <a href="#catalogo">Catalogo</a>
+                <a href="#marcas">Marcas</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#catalogo">Ver Catalogo</a>
             </nav>
         </div>
     </header>
     <main>
         <section class="banner">
-            <div>
+            <div class="banner-text">
                 <h1>Venta de implementos para estudio fotográfico.</h1>
                 <p>Contamos con productos como parantes, flashes, luces continuas, modificadores de luz y mucho más.</p>
                 <a href="#">Revisar Catálogo</a>
@@ -32,24 +38,25 @@
                 <img src="src/img-principal.007bd27.webp" alt="photobomm">
             </div>
         </section>
-        <section class="products">
+        <section id="catalogo" class="products">
             <h2>Nuestro Catalago</h2>
             <div class="filter">
-                <input type="text" name="" id="">
-                <!-- <search>
-                    <form action="https://www.google.com/search">
-                      <label>
-                        <input type="search" name="q" autocomplete="off">
-                        <img src="" alt="lupa">
-                      </label>
-                      <input type="submit" value="Buscar">
-                    </form>
-                  </search> -->
+                <div>
+                    <div class="search">
+                        <input type="text" name="" id="" placeholder="Buscar producto">
+                        <div class="icon-search">
+                            <svg width="20" height="20" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.125 16.25C13.06 16.25 16.25 13.06 16.25 9.125C16.25 5.18997 13.06 2 9.125 2C5.18997 2 2 5.18997 2 9.125C2 13.06 5.18997 16.25 9.125 16.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 17L15.5 15.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            <div>
                 <select>
                     <option value="">Todos los precios</option>
                     <option value="">Precios de menor a mayor</option>
                     <option value="">Precios de mayor a menor</option>
                 </select>
+            </div>
+            <div>
                 <select>
                     <option value="">Todas las categorias</option>
                     <option value="">Accesorios</option>
@@ -62,6 +69,8 @@
                     <option value="">Modificadores de luz</option>
                     <option value="">Parantes, Rotulas, Brackets Y Tripodes</option>
                 </select>
+            </div>
+            <div>
                 <select>
                     <option value="">Todas las Marcas</option>
                     <option value="">Caden</option>
@@ -72,80 +81,83 @@
                     <option value="">Yongnuo</option>
                 </select>
             </div>
-            <div class="card-products">
-                <article>
+        </div>
+        <div class="card-products">
+            <article>
+                <figure>
                     <img src="src/products/nicefoto-sn-104 001.webp" alt="" srcset="">
-                    <h3>UB-L1 Sombrilla GODOX</h3>
-                    <p>Diámetro: 152cm</p>
-                    <p>S/ 230.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/flash-1.webp" alt="" srcset="">
-                    </figure>
-                    <h3>Olla parabólica 45°</h3>
-                    <p>De altísimo rendimiento</p>
-                    <p>S/ 280.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/nicefoto-honeycomb-grid-6.webp" alt="" srcset="">
-                    </figure>
-                    <h3>SN-04 Olla reflectora</h3>
-                    <p>Entrada bowens</p>
-                    <p>S/ 45.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/nicefoto-honeycomb-grid-4.webp" alt="" srcset="">
-                    </figure>
-                    <h3>Grilla para olla reflectora 2x2</h3>
-                    <p>Diámetro: 17cm</p>
-                    <p>S/ 65.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/nicefoto-honeycomb-grid-3.webp" alt="" srcset="">
-                    </figure>
-                    <h3>Grilla para olla reflectora 3x3</h3>
-                    <p>Diámetro: 17cm</p>
-                    <p>S/ 65.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/nicefoto-honeycomb-grid-2.webp" alt="" srcset="">
-                    </figure>
-                    <h3>Grilla para olla reflectora 4x4</h3>
-                    <p>Diámetro: 17cm</p>
-                    <p>S/ 65.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/nicefoto-45-28x34.5.webp" alt="" srcset="">
-                    </figure>
-                    <h3>Grilla para olla reflectora 6x6</h3>
-                    <p>Diámetro: 17cm</p>
-                    <p>S/ 65.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-                <article>
-                    <figure>
-                        <img src="src/products/godox-ub-l1.webp" alt="" srcset="">
-                    </figure>
-                    <h3>SN-104 Protector de Flash</h3>
-                    <p>Entrada bowens</p>
-                    <p>S/ 45.00</p>
-                    <a href="#">Comprar</a>
-                </article>
-            </div>
+                </figure>
+                <h3>UB-L1 Sombrilla GODOX</h3>
+                <p>Diámetro: 152cm</p>
+                <p>S/ 230.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-sn-104 001.webp" alt="" srcset="">
+                </figure>
+                <h3>Olla parabólica 45°</h3>
+                <p>De altísimo rendimiento</p>
+                <p>S/ 280.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-honeycomb-grid-6.webp" alt="" srcset="">
+                </figure>
+                <h3>SN-04 Olla reflectora</h3>
+                <p>Entrada bowens</p>
+                <p>S/ 45.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-honeycomb-grid-4.webp" alt="" srcset="">
+                </figure>
+                <h3>Grilla para olla reflectora 2x2</h3>
+                <p>Diámetro: 17cm</p>
+                <p>S/ 65.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-honeycomb-grid-3.webp" alt="" srcset="">
+                </figure>
+                <h3>Grilla para olla reflectora 3x3</h3>
+                <p>Diámetro: 17cm</p>
+                <p>S/ 65.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-honeycomb-grid-2.webp" alt="" srcset="">
+                </figure>
+                <h3>Grilla para olla reflectora 4x4</h3>
+                <p>Diámetro: 17cm</p>
+                <p>S/ 65.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/nicefoto-45-28x34.5.webp" alt="" srcset="">
+                </figure>
+                <h3>Grilla para olla reflectora 6x6</h3>
+                <p>Diámetro: 17cm</p>
+                <p>S/ 65.00</p>
+                <a href="#">Comprar</a>
+            </article>
+            <article>
+                <figure>
+                    <img src="src/products/godox-ub-l1.webp" alt="" srcset="">
+                </figure>
+                <h3>SN-104 Protector de Flash</h3>
+                <p>Entrada bowens</p>
+                <p>S/ 45.00</p>
+                <a href="#">Comprar</a>
+            </article>
+        </div>
         </section>
-        <section class="brands">
+        <section id="marcas" class="brands">
             <p>Marcas</p>
             <div class="card-brands">
                 <article>
@@ -181,7 +193,7 @@
             </div>
             
         </section>
-        <section class="contact">
+        <section id="contacto" class="contact">
         <h2>Contacto</h2>
         <div class="contact-info">
             <p>Tienda Fisica</p>
@@ -198,12 +210,12 @@
             <p>Foto Salinas © 2023. Derechos reservados</p>
             <div class="social-media">
                 <p>Síguenos en:</p>
-                <a href="">
+                <a href="https://web.facebook.com/foto.cesar.salinas?_rdc=1&_rdr" target="_blank">
                     <figure>
                         <img src="src/social/img-facebook.5e456cc.webp" alt="link facebook">
                     </figure>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/foto.salinas/" target="_blank">
                     <figure>
                         <img src="src/social/img-instagram.acffce5.webp" alt="link instagram">
                     </figure>
@@ -211,5 +223,6 @@
             </div>
         </footer>
     </main>
+    <script src="/main.js"></script>
 </body>
 </html>
